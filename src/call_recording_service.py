@@ -104,7 +104,7 @@ class CallRecordingService:
             audio_mixing=DUAL_CHANNEL_AGENT,
             webhooks=[
                 WebhookConfig(
-                    url="https://zr1red2j54.execute-api.ap-south-1.amazonaws.com/dev/webhooks/livekit",
+                    url="https://olzttsjp85.execute-api.ap-south-1.amazonaws.com/dev/core/webhooks/livekit",
                     signing_key=RecordingConfig.LIVEKIT_API_KEY
                 )
             ]
