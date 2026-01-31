@@ -5,7 +5,7 @@ import httpx
 
 logger = logging.getLogger("agent-config")
 
-API_BASE_URL = "https://wi5fbjhqu5mrsj2sxun42dkpqq0lstgv.lambda-url.ap-south-1.on.aws"
+API_BASE_URL = "https://olzttsjp85.execute-api.ap-south-1.amazonaws.com/dev/core/agents/config"
 
 
 async def fetch_agent_config(agent_id: str) -> dict | None:
@@ -22,7 +22,7 @@ async def fetch_agent_config(agent_id: str) -> dict | None:
         return None
     
     try:
-        api_url = f"{API_BASE_URL}/?agent_id={agent_id}"
+        api_url = f"{API_BASE_URL}/{agent_id}"
         
         async with httpx.AsyncClient() as client:
             response = await client.get(api_url, timeout=10.0)
